@@ -1,0 +1,53 @@
+/*
+	This file is part of the Parallelism Mura CMS Theme
+
+	Notes:
+		- this is where custom overrides to both the original theme and Mura CMS styling is added
+*/
+
+/* Footer */
+	#footer {
+		min-height: 150px;
+	}
+
+	/* just in case someone hits an actual image url, we don't want the image to appear by itself */
+	.mura-asset-detail {
+		display: none;
+	}
+
+/* Login */
+	.mura-login-form {
+		clear: both;
+		display: block;
+	}
+	.mura-not-registered {
+		clear: both;
+		display: block;
+		margin: 3em 0;
+	}
+	.mura-not-registered h2 a.button, h3 a.button {
+		font-size: 0.75em;
+		margin: 0 0 0 1em;
+	}
+
+
+/* Tablet (up to 1200px) */
+	@media (max-width: 1200px) {
+	}
+
+/* Mobile (up to 480px) */
+	@media (max-width: 480px) {
+		/* Hide the Front End Toolbar when viewing at mobile size */
+		div.mura.mura-toolbar {
+			display: none;
+		}
+	}
+
+/* PRINT */
+	@media print {
+		.mura-toolbar { display:none; }
+		.editableObjectControl .edit { display:none;}
+		.editableObject > ul.editableObjectControl > li.edit > a.frontEndToolsModal { display:none !important;}
+
+		a { text-decoration: none; color: black; }
+	}
