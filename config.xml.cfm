@@ -8,13 +8,11 @@
 <theme>
 
 	<imagesizes>
-		<!--- <imagesize name="portfoliothumb" width="AUTO" height="210" />
-		<imagesize name="backgroundimage" width="1324" height="900" /> --->
+		<!--- <imagesize name="imagename" width="X" height="X" /> --->
 	</imagesizes>
 
 	<extensions>
-		<!--- <cfinclude template="class_extensions/definitions/pageHome.cfm" />
-		<cfinclude template="class_extensions/definitions/fileDefault.cfm" /> --->
+		<!--- <cfinclude template="class_extensions/definitions/pageHome.cfm" /> --->
 	</extensions>
 
 </theme>

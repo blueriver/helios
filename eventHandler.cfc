@@ -12,30 +12,80 @@ component extends="mura.cfobject" output="false" {
 	*/
 
 	public any function onApplicationLoad($) {
+
 		// make sure 'Home' page set to 'Page/Home'
 		var homeBean = arguments.$.getBean('content').loadBy(filename='');
-
-		// this is a unique, one-page Portfolio site, so we need to enforce some things
 		if ( homeBean.getValue('subType') != 'Home' ) {
 			homeBean
 				.setValue('subType', 'Home')
-				.setValue('template', 'default.cfm')
+				.setValue('template', 'home.cfm')
 				.save();
 		}
 
 	}
 
+	public any function onSiteRequestStart($) {
+
+		/* cfStatic */
+		// http://dominicwatson.github.io/cfstatic/full-guide.html (See Configuration section)
+		// if in production, set checkForUpdates=false
+		/*
+		arguments.$.static(
+			outputDirectory = 'compiled'
+			, checkForUpdates = !arguments.$.siteConfig('cache')
+			, lessGlobals = ExpandPath($.siteConfig('themeAssetPath') & '/css/less-globals/globals.less')
+		);
+		*/
+
+	}
+
 	public any function onRenderStart($) {
-		// this is a one-page Porfolio site, so any requests for 
-		// images should be redirected back to the home page
-		if ( 
-			Len(arguments.$.content('filename')) 
-			&& arguments.$.content('contenttype') == 'Image' 
-			&& ListFind('jpg,jpeg,gif,png', LCase(arguments.$.content('fileext')))
-		) {
-			location(arguments.$.createHref(filename=''), false);
+
+		// force Home layout template if subtype is 'Home'
+		if ( arguments.$.content('subtype') == 'Home' ) {
+			arguments.$.content('template', 'home.cfm');
+		}
+
+		// force Summary page view for Link and File content types
+		if ( arguments.$.event('showMeta') != 2 ) {
+			arguments.$.event('showMeta', 1);
+		}
+
+		// for code syntax highlighting
+		try {
+			arguments.$.loadPrettify();
+		} catch(any e) {
+			// Mura CMS version is probably older than 6.1
 		}
 
 	}
+
+	// Class Extensions
+		// public any function onComponentWithHeadingAndButtonLinkBodyRender($) {
+		// 	var str = '';
+		// 	savecontent variable='str' {
+		// 		WriteOutput(arguments.$.dspThemeInclude('class_extensions/display/componentWithHeadingAndButtonLink.cfm'));
+		// 	}
+		// 	return str;
+		// }
+
+		// this uses an external RSS Feed and outputs the data
+		// public any function onComponentRSSFeedBodyRender($) {
+		// 	var str = '';
+		// 	savecontent variable='str' {
+		// 		WriteOutput(arguments.$.dspThemeInclude('class_extensions/display/componentRSSFeed.cfm'));
+		// 	}
+		// 	return str;
+		// }
+
+		// used in the common footer
+			// public any function onComponentArticleListBodyRender($) {
+			// 	var str = '';
+			// 	savecontent variable='str' {
+			// 		WriteOutput(arguments.$.dspThemeInclude('class_extensions/display/componentArticleList.cfm'));
+			// 	}
+			// 	return str;
+			// }
+
 
 }

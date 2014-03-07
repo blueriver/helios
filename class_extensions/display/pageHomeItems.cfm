@@ -1,8 +1,8 @@
 <!---
-			This file is part of the Parallelism Mura CMS Theme
+			This file is part of the Helios Mura CMS Theme
 --->
 <cfoutput>
-	<cfset it = $.getItemsIterator() />
+	<!--- <cfset it = $.getItemsIterator() />
 	<cfif it.hasNext()>
 		<cfloop condition="it.hasNext()">
 			<cfset item = it.next() />
@@ -16,5 +16,5 @@
 				</article>
 			</cfif>
 		</cfloop>
-	</cfif>
+	</cfif> --->
 </cfoutput>

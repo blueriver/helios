@@ -1,19 +1,9 @@
 /*
-	This file is part of the Parallelism Mura CMS Theme
+	This file is part of the Helios Mura CMS Theme
 
 	Notes:
 		- this is where custom overrides to both the original theme and Mura CMS styling is added
 */
-
-/* Footer */
-	#footer {
-		min-height: 150px;
-	}
-
-	/* just in case someone hits an actual image url, we don't want the image to appear by itself */
-	.mura-asset-detail {
-		display: none;
-	}
 
 /* Login */
 	.mura-login-form {
