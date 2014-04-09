@@ -8,20 +8,35 @@
 
 		#$.dspThemeInclude('templates/inc/header.cfm')#
 
-		<div class="wrapper style1">
+		<!-- Wrapper -->
+			<div class="wrapper style1">
 
-			<div class="container">
-				<div class="row">
+				<!-- container -->
+					<div class="container">
+						
+						<!-- row -->
+							<div class="row">
 
-					<!--- Content / Body --->
-						<div class="12u skel-cell-important" id="content">
-							#$.dspThemeInclude('templates/inc/body.cfm')#
-						</div>
-					<!--- // Content / Body // --->
+								<!--- Content / Body --->
+									<div class="12u skel-cell-important" id="content">
+										#$.dspThemeInclude('templates/inc/body.cfm')#
+									</div>
+								<!--- // Content / Body // --->
 
-				</div>
+							</div>
+						<!-- // row // -->
+
+						<!-- Features -->
+							<cfif YesNoFormat($.content('heliosShowFeatures'))>
+								<hr />
+								#$.dspComponent('[ Body ] Features')#
+							</cfif>
+						<!-- // Features // -->
+
+					</div>
+				<!-- // container // -->
+
 			</div>
-		</div>
 		<!--- // Wrapper // --->	
 
 	#$.dspThemeInclude('templates/inc/footer.cfm')#

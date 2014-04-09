@@ -5,6 +5,239 @@
 		- this is where custom overrides to both the original theme and Mura CMS styling is added
 */
 
+/* Misc. */
+	.post .credits {
+		clear: both;
+		display: block;
+		text-align: center;
+		float: none;
+	}
+	.highlight {
+		background-color: transparent;
+	}
+
+	form .actions {
+		margin-top: 0;
+	}
+	.button {
+		margin-top: 1em;
+	}
+
+	.container .editableObject.editableComponent, .container .editableObjectContents {
+		width: auto !important;
+	}
+	#features .editableObject h2 {
+		text-align: center;
+	}
+
+	.sidebar span.editableObject, span.editableObject {
+		margin-bottom: 2.5em;
+	}
+
+	.homepage header .byline, .homepage header .byline p {
+		text-align: center;
+	}
+
+	.container.special .mura-editable footer {
+		text-align: center;
+	}
+
+/* Banner */
+	#banner {
+		text-align: center;
+	}
+	#banner .byline {
+		padding:0 1em;
+	}
+	#banner p {
+		text-align: center;
+	}
+
+/* Prettyprint */
+	ol.linenums {
+		list-style-type: decimal;
+	}
+
+/* nav */
+	nav ul ul {
+		margin-left: 1em;
+		margin-bottom: 0;
+	}
+
+	/*#nav > ul > li.current_page_item > a, li.current_page_item > a {
+		color: white;
+	}*/
+
+/* pagination */
+	ul.navSequential li.current a.current {
+		background-color: #d9d9d9;
+	}
+
+/* Comments */
+	.mura-comments {
+		margin-top: 2em;
+	}
+	.mura-comment-thumb img {
+		/*border-radius: 8px;*/
+	}
+
+/* Category Summary */
+	.mura-category-summary a.rss {
+		float: right;
+		width: auto;
+		clear:right;
+		padding: 0 0 0 18px;
+	}
+
+/* Tag Cloud */
+	.mura-tag-cloud a.tag {
+		color: #ef8376;
+	}
+
+/* Search */
+	.moreResults p, .moreResults ul {
+		margin-bottom: 0;
+	}
+
+/* Contact */
+	.map img {
+		max-width: 100%;
+		height: auto;
+		/*border-radius: 8px;*/
+	}
+	.map hr {
+		top: 0;
+		margin: 1em 0;
+	}
+
+/* Sidebar */
+	.sidebar nav a.current {
+		text-decoration: none;
+		color: #ef8376;
+	}
+
+	/*.sidebar nav.box {
+		margin-bottom: 2.75em;
+	}
+	.sidebar nav.box ul {
+		margin-bottom: 0;
+	}*/
+	.sidebar nav ul li, .sidebar .mura-category-summary ul li {
+		margin-bottom: 0.5em;
+		clear: both;
+		display: block;
+	}
+
+	.sidebar a.current, .mura-category-summary li.current a, .mura-nav-archive li.current a {
+		color: black;
+		text-decoration: none;
+	}
+
+	.sidebar .mura-index .title {
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+
+	.sidebar hr {
+		top:3em;
+		margin-bottom:6em;
+	}
+
+
+/* Calendar */
+	.mura-calendar {
+		clear: both;
+		display: block;
+	}
+	.mura-calendar table th {
+		background-color: #d9d9d9;
+	}
+	.mura-calendar table tr.dayofweek {
+		background-color: #f9f9f9;
+	}
+
+
+/* Forms */
+		form {}
+
+			form legend {
+				font-weight: bold;
+				padding:1em 0 0.5em 0;
+				font-size: 1.2em;
+			}
+			
+			form label {
+				display: block;
+			}
+
+			form input.text,
+			form input[type='text'],
+			form input[type='password'],
+			form select,
+			form textarea {
+				display: block;
+				box-shadow: inset 0 0 0 1px #e6e6e6;
+				background: #f8f8f8;
+				width: 100%;
+				padding: 0.85em 1em 0.85em 1em;
+				border-radius: 0.25em;
+				border: 0;
+				-moz-transition: all 0.25s ease-in-out;
+				-webkit-transition: all 0.25s ease-in-out;
+				-o-transition: all 0.25s ease-in-out;
+				-ms-transition: all 0.25s ease-in-out;
+				transition: all 0.25s ease-in-out;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				-o-appearance: none;
+				-ms-appearance: none;
+				appearance: none;
+			}
+
+			form input[type='checkbox'] {
+				-webkit-appearance: checkbox;
+			}
+			form input[type='radio'] {
+				-webkit-appearance: radio;
+			}
+
+				form input.text,
+				form input[type='text'],
+				form input[type='password'],
+				form select {
+					line-height: 1.25em;
+				}
+
+				form input.text:focus,
+				form select:focus,
+				form textarea:focus {
+					outline: 0;
+					box-shadow: inset 0 0 0 1px #afd9e0;
+					background: #fcfcfc;
+				}
+
+			form textarea {
+				min-height: 13em;
+			}
+			
+			form select {
+				position: relative;
+			}
+			
+				form select option {
+					color: #000;
+				}
+			
+			form ::-moz-focus-inner {
+				border: 0;
+			}
+
+			form .formerize-placeholder { color: #555 !important; }
+			form ::-webkit-input-placeholder { color: #aaa !important; }
+			form :-moz-placeholder { color: #555 !important; }
+			form ::-moz-placeholder { color: #555 !important; }
+			form :-ms-input-placeholder { color: #555 !important; }
+
 /* Login */
 	.mura-login-form {
 		clear: both;
@@ -19,6 +252,7 @@
 		font-size: 0.75em;
 		margin: 0 0 0 1em;
 	}
+
 
 
 /* Tablet (up to 1200px) */

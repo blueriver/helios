@@ -1,5 +1,5 @@
 /*
-	This file is part of the Helios Mura CMS Theme
+		This file is part of the Helios Mura CMS Theme
 */
 component extends="mura.cfobject" output="false" {
 
@@ -26,11 +26,11 @@ component extends="mura.cfobject" output="false" {
 			//this.userToolsWrapperClass = this.generalWrapperClass;
 		
 		// headings
-			this.headline = 'h1';
-			this.subHead1 = 'h2';
-			this.subHead2 = 'h3';
-			this.subHead3 = 'h4';
-			this.subHead4 = 'h5';
+			this.headline = 'h2';
+			this.subHead1 = 'h3';
+			this.subHead2 = 'h4';
+			this.subHead3 = 'h5';
+			this.subHead4 = 'h6';
 
 		// buttons
 			this.customButtonClass = 'button';
@@ -65,6 +65,17 @@ component extends="mura.cfobject" output="false" {
 			var topSectionID = ListLen(path) > 1 ? ListGetAt(path, 2) : '';
 			return Len(topSectionID)
 				? variables.$.getBean('content').loadBy(contentid=topSectionID).getTitle()
+				: '';
+		}
+
+		public any function getHomeBean() {
+			return variables.$.getBean('content').loadby(filename='');
+		}
+
+		public string function dspBackgroundImage() {
+			var img = variables.$.getURLForImage(fileid=getHomeBean().getValue('headerBackgroundImage'), size='headerbackgroundimage');
+			return Len(img) 
+				? '<style>##header{background-image:url(' & img & ');}</style>'
 				: '';
 		}
 
@@ -114,6 +125,7 @@ component extends="mura.cfobject" output="false" {
 			, numeric maxItems=6
 			, numeric columnCount=3
 			, string readMoreText='Learn More'
+			, boolean showImage=true
 			, boolean showDate=false
 			, boolean showCredits=false
 			, boolean showCommentCount=false
@@ -137,7 +149,7 @@ component extends="mura.cfobject" output="false" {
 				} else if ( !totalItems ) {
 					WriteOutput(dspNoItemsNotice());
 				} else {
-					include 'class_extensions/display/home/homeFeeds.cfm';
+					include 'class_extensions/display/feedColumns.cfm';
 				}
 			}
 
