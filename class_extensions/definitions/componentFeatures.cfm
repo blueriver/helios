@@ -1,5 +1,5 @@
 <!---
-	This file is part of the Helios Mura CMS Theme
+			This file is part of the Helios Mura CMS Theme
 --->
 <extension type="Component" subType="Features" hasBody="0">
 
