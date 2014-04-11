@@ -14,6 +14,7 @@
 		<title>#HTMLEditFormat($.siteConfig('site'))# - #HTMLEditFormat($.content('title'))#</title>
 		<meta name="description" content="#HTMLEditFormat($.content('metaDesc'))#" />
 		<meta name="keywords" content="#HTMLEditFormat($.content('metaKeywords'))#" />
+		<link rel="icon" href="#$.siteConfig('assetPath')#/images/favicon.ico" type="image/x-icon" />
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css" />
 		<!--[if lte IE 8]><script src="#$.siteConfig('themeAssetPath')#/js/html5shiv.js"></script><![endif]-->
 
