@@ -14,7 +14,7 @@ component extends="mura.cfobject" output="false" {
 	// contentRenderer settings
 		// Layout Manager
 			this.layoutmanager = true;
-			this.legacyObject = false;
+			this.legacyObjects = false;
 
 		// GENERAL
 			this.jsLib = 'jquery';
