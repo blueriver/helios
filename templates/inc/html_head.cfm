@@ -19,8 +19,8 @@
 		<!--[if lte IE 8]><script src="#$.siteConfig('themeAssetPath')#/js/html5shiv.js"></script><![endif]-->
 
 		<!-- Mura CSS -->
-		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.7.1.min.css" />
-		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.7.1.skin.css" />
+		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.#$.globalConfig('version')#.min.css" />
+		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.#$.globalConfig('version')#.skin.css" />
 
 		<!--- jQuery --->
 		<script src="#$.siteConfig('themeAssetPath')#/js/jquery.min.js"></script>
