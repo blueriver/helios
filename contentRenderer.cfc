@@ -12,7 +12,11 @@ component extends="mura.cfobject" output="false" {
 	*/
 
 	// contentRenderer settings
-		// GENERAL 
+		// Layout Manager
+			this.layoutmanager = true;
+			this.legacyObject = false;
+
+		// GENERAL
 			this.jsLib = 'jquery';
 			this.jsLibLoaded = true;
 
@@ -24,7 +28,7 @@ component extends="mura.cfobject" output="false" {
 			// this.navWrapperClass = this.generalWrapperClass;
 			// this.tagCloudWrapperClass = this.generalWrapperClass;
 			//this.userToolsWrapperClass = this.generalWrapperClass;
-		
+
 		// headings
 			this.headline = 'h2';
 			this.subHead1 = 'h3';
@@ -70,7 +74,7 @@ component extends="mura.cfobject" output="false" {
 
 		public string function dspBackgroundImage() {
 			var img = variables.$.getURLForImage(fileid=getHomeBean().getValue('headerBackgroundImage'), size='headerbackgroundimage');
-			return Len(img) 
+			return Len(img)
 				? '<style>##header{background-image:url(' & img & ');}</style>'
 				: '';
 		}
@@ -79,7 +83,7 @@ component extends="mura.cfobject" output="false" {
 	// class extension specific methods
 		// helper for RSS Feeds
 			public any function convertFeedDateTime(string httpDateTime) {
-				return IsDate(arguments.httpDateTime) 
+				return IsDate(arguments.httpDateTime)
 					? LSDateFormat(ParseDateTime(arguments.httpDateTime), 'long')
 					: 'invalid';
 			}
@@ -92,8 +96,8 @@ component extends="mura.cfobject" output="false" {
 
 			public any function getLocalFeedNames() {
 				var rs = getLocalFeeds();
-				return rs.getRecordcount() 
-					? ValueList(rs.name, '^') 
+				return rs.getRecordcount()
+					? ValueList(rs.name, '^')
 					: 'No Content Collections Exist!';
 			}
 
