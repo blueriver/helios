@@ -11,7 +11,7 @@
 		<!-- // Header // -->
 
 		<!-- Body -->
-			#$.dspThemeInclude('class_extensions/display/pageHome/body.cfm')#
+			#$.dspThemeInclude('content_types/page_home/includes/body.cfm')#
 		<!-- // Body // -->
 
 		<!-- Features -->

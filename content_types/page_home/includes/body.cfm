@@ -26,7 +26,7 @@
 						</span>
 					</cfif>
 				<!-- // Banner Content // -->
-					
+
 			</div>
 		</cfif>
 	<!-- // Banner // -->
@@ -34,7 +34,7 @@
 
 	<!-- Carousel -->
 		<cfif YesNoFormat($.content('homeShowCarousel'))>
-			#$.dspThemeInclude('class_extensions/display/pageHome/carousel.cfm')#
+			#$.dspThemeInclude('content_types/page_home/includes/carousel.cfm')#
 		</cfif>
 	<!-- // Carousel // -->
 
@@ -55,7 +55,7 @@
 							</span>
 						</cfif>
 
-					<!--- Title + Subtitle --->	
+					<!--- Title + Subtitle --->
 						<header>
 							<h2>#$.renderEditableAttribute(attribute='homeBodyTitle', label='Body Title')#</h2>
 							<cfif Len($.content('homeBodySubtitle'))>
@@ -66,7 +66,7 @@
 						</header>
 
 					<!--- Main Content --->
-						<!--- 
+						<!---
 							For information on dspBody(), visit:
 							http://docs.getmura.com/v6/front-end/template-variables/document-body/
 						--->
