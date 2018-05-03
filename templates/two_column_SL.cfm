@@ -35,7 +35,9 @@
 						<!-- Features -->
 							<cfif YesNoFormat($.content('heliosShowFeatures'))>
 								<hr />
+								<div class="row">
 								#$.dspComponent('[ Body ] Features')#
+								</div>
 							</cfif>
 						<!-- // Features // -->
 

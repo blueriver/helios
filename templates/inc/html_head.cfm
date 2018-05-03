@@ -18,9 +18,9 @@
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css" />
 		<!--[if lte IE 8]><script src="#$.siteConfig('themeAssetPath')#/js/html5shiv.js"></script><![endif]-->
 
-		<!-- Mura CSS -->
-		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.#$.globalConfig('version')#.min.css" />
-		<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.#$.globalConfig('version')#.skin.css" />
+		<!--- Mura CMS Base Styles--->
+		<!--- Optional: Mura CMS Skin Styles. Duplicate to your theme to customize, changing 'assetPath' to 'themeAssetPath' below. Don't forget to move, remove or replace sprite.png. --->
+		#$.outputMuraCSS(version="7.1", includeskin=true)#
 
 		<!--- jQuery --->
 		<script src="#$.siteConfig('themeAssetPath')#/js/jquery.min.js"></script>

@@ -12,7 +12,7 @@
         					label="Show Features Section?"
         					hint="If yes, the Features component will appear directly above the footer area."
         					type="radiogroup"
-        					defaultValue="true"
+        					defaultValue="false"
         					required="false"
         					validation=""
         					regex=""

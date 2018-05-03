@@ -35,7 +35,9 @@
 						<!-- Features -->
 							<cfif YesNoFormat($.content('heliosShowFeatures'))>
 								<hr />
+								<div class="row">
 								#$.dspComponent('[ Body ] Features')#
+								</div>
 							</cfif>
 						<!-- // Features // -->
 
@@ -43,7 +45,7 @@
 				<!-- // container // -->
 
 			</div>
-		<!-- // Wrapper // -->	
+		<!-- // Wrapper // -->
 
 	#$.dspThemeInclude('templates/inc/footer.cfm')#
 </cfoutput>

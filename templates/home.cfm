@@ -17,8 +17,10 @@
 		<!-- Features -->
 			<cfif YesNoFormat($.content('heliosShowFeatures'))>
 				<div class="wrapper style1">
-					<section id="features" class="container special">
-						#$.dspComponent('[ Home ] Features')#
+					<section id="features" class="container special ">
+						<div class="row">
+						#$.dspComponent('[ Body ] Features')#
+						</div>
 					</section>
 				</div>
 			</cfif>

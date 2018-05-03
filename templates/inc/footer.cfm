@@ -3,10 +3,10 @@
 --->
 <cfoutput>
 		<!-- Footer -->
-			<div id="footer">
+			<div id="footer" class="mura-twelve">
 				<div class="container">
 					<div class="row">
-						
+
 						<!-- Mura CMS RSS Feed -->
 							<section class="4u">
 								#$.dspComponent('[ Footer ] Mura CMS RSS Feed')#
@@ -26,12 +26,12 @@
 					<hr />
 					<div class="row">
 						<div class="12u">
-							
+
 							<!-- Contact -->
 								<section class="contact">
 									#$.dspComponent('[ Footer ] Get in touch')#
 								</section>
-							
+
 							<!-- Copyright -->
 								<div class="copyright">
 									<ul class="menu">
@@ -40,9 +40,9 @@
 										<li>Powered by: <a href="http://www.getmura.com">Mura CMS</a></li>
 									</ul>
 								</div>
-							
+
 						</div>
-					
+
 					</div>
 				</div>
 			</div>
